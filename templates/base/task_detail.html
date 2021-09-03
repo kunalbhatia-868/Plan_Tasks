@@ -1,0 +1,12 @@
+<h1>Task : {{task}}</h1>
+
+<p>
+    {{task.description}}
+</p>
+
+
+{% if task.completed %}
+    Completed
+{% else %}
+    Incomplete    
+{% endif %}  
