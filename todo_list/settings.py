@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = decouple.config('SECRET_KEY',default='')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = decouple.config('DEBUG',cast=bool,default=True)
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = [
     host.strip()
