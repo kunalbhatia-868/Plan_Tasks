@@ -13,7 +13,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from email.policy import default
 from pathlib import Path
 import os
+
+import dj_database_url
 import decouple
+from django import conf
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -81,12 +84,17 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+else:
+    DATABASES={
+        'default':dj_database_url.config(default=config('DATABASE_URL'))
+    }
 
 
 # Password validation
