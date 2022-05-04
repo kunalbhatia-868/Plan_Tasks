@@ -1,11 +1,10 @@
 # To-Do-List-Application
-A To-Do List Application with user login,signup and CRUD functionality
+
+A To-Do List Application with user login,signup and CRUD Functionality
 
 <img src="images/todolist1.PNG" width="800" height="600">
 <img src="images/todolist2.PNG" width="800" height="600">
 <img src="images/todolist3.PNG" width="800" height="600">
-
-
 
 ## Running this project
 
@@ -37,3 +36,4 @@ Now you can run the project with this command
 
 ```
 python manage.py runserver
+```
