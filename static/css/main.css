@@ -83,9 +83,8 @@
     }
 
     .search-form{
-        margin-top: 20px ;
         display: flex;
-        
+        align-items: stretch;
     }
 
     #search-add-wrapper{
@@ -95,10 +94,11 @@
         padding: 10px;
     }
     
-    #add-link{
+    #add-link {
         color: #EB796F;
         text-decoration: none;
         font-size: 42px;
+        margin-right: 1rem;
         text-shadow: 1px 1px #81413b;
     }
 

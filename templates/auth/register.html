@@ -11,6 +11,7 @@
         {% for field in form %}
             <label style="margin-bottom: 10px;" for="{{field.id_for_label}}">{{field.label}}</label>
             {{field}}
+            {{field.errors}}
         {% endfor %}
 
         <input style="margin-top: 10px;" class="button" type="submit" value="register">
